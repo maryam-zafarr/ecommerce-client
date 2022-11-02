@@ -1,18 +1,21 @@
 .navbar {
   display: flex;
-  padding: 12px 30px;
+  padding: 12px 30px 0px 30px;
+  background-color: rgba(0, 0, 0, 0.398);
 }
 
 .logo {
   font-size: 24px;
   font-weight: 600;
   margin-right: auto;
+  color: white;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
   align-items: center;
+  color: white;
 }
 
 .navbar li {
@@ -27,5 +30,6 @@
 
 .navLink {
   text-decoration: none;
-  color: rgb(5, 4, 4);
+  font-weight: 500;
+  color: white;
 }
