@@ -1,15 +1,7 @@
-import { Switch, Route } from "react-router-dom";
-import Register from "./components/Register";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Switch } from "react-router-dom";
 
 const App = () => {
-  return (
-    <Switch>
-      <Route path="/register">
-        <Register />
-      </Route>
-    </Switch>
-  );
+  return <Switch></Switch>;
 };
 
 export default App;
