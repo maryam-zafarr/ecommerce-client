@@ -1,5 +1,6 @@
 import classes from "./Auth.module.css";
 import { useFormik } from "formik";
+import { Link } from "react-router-dom";
 
 const validate = (values) => {
   const errors = {};
@@ -68,7 +69,9 @@ const Login = () => {
             <button type="submit" className={classes.actionBtn}>
               LOGIN
             </button>
-            <p className="text-center">Create an account</p>
+            <p className="text-center">
+              <Link to="/register">Create an account</Link>
+            </p>
           </div>
         </div>
       </form>

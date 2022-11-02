@@ -1,5 +1,6 @@
 import classes from "./Auth.module.css";
 import { useFormik } from "formik";
+import { Link } from "react-router-dom";
 
 const validate = (values) => {
   const errors = {};
@@ -90,7 +91,9 @@ const Register = () => {
             <button type="submit" className={classes.actionBtn}>
               REGISTER
             </button>
-            <p className="text-center">Already have an account? Sign In</p>
+            <p className="text-center">
+              Already have an account? <Link to="/login">Sign In</Link>
+            </p>
           </div>
         </div>
       </form>
