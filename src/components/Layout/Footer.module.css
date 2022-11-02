@@ -1,0 +1,41 @@
+.footer {
+  display: flex;
+}
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin-right: 10px;
+}
+p {
+  text-align: justify;
+}
+.center {
+  flex: 1;
+  padding: 30px;
+}
+h3,
+h4 {
+  margin-bottom: 20px;
+}
+.center ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.center ul li {
+  width: 50%;
+  margin-bottom: 10px;
+}
+.right {
+  flex: 1;
+  padding: 30px;
+}
+.contactItem {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}

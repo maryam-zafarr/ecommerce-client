@@ -19,6 +19,6 @@ export const sliderItems = [
     id: "2",
     img: image3,
     title: "EDIT DE EXQUISITE",
-    desc: "FORMAL AND CHIC. YOU CANT MISS IT. BUY NOW.",
+    desc: "FORMALLY CHIC. YOU CANT MISS IT. BUY NOW.",
   },
 ];
