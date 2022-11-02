@@ -5,7 +5,7 @@ import { sliderItems } from "../../assets/data";
 
 const Slider = () => {
   return (
-    <div className={`fixed-top ${classes.slider}`}>
+    <div className={classes.slider}>
       <Carousel>
         {sliderItems.map((item) => {
           return (

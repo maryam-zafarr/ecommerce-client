@@ -6,7 +6,7 @@ import { ShoppingCartOutlined } from "@mui/icons-material";
 
 const Navbar = () => {
   return (
-    <div className={classes.navbar}>
+    <div className={`fixed-top ${classes.navbar}`}>
       <h1 className={classes.logo}>V A N I T Y</h1>
       <nav>
         <ul>
