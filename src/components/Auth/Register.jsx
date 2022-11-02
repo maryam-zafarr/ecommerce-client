@@ -1,6 +1,8 @@
 import classes from "./Auth.module.css";
 import { useFormik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { register } from "../../store/api";
 
 const validate = (values) => {
   const errors = {};
@@ -25,6 +27,9 @@ const validate = (values) => {
 };
 
 const Register = () => {
+  const dispatch = useDispatch();
+  const history = useHistory();
+
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -33,7 +38,8 @@ const Register = () => {
     },
     validate,
     onSubmit: async (values) => {
-      console.log(values);
+      dispatch(register(values));
+      history.push("/");
     },
   });
 
