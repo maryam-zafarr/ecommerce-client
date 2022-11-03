@@ -18,6 +18,23 @@ const AllProducts = () => {
   return (
     <div className={classes.productList}>
       <h2>WOMEN</h2>
+      <div className={classes.filters}>
+        <div className={classes.filter}>
+          <h6 className="me-3">Filter Products</h6>
+          <select>
+            <option>Women</option>
+            <option>Men</option>
+            <option>Accessories</option>
+          </select>
+        </div>
+        <div className={classes.filter}>
+          <h6 className="me-3">Sort Products</h6>
+          <select>
+            <option>Ascending</option>
+            <option>Descending</option>
+          </select>
+        </div>
+      </div>
       <div className={`row ${classes.items}`}>
         {products.map((item) => {
           return (
