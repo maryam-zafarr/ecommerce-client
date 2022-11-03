@@ -1,0 +1,21 @@
+.slider {
+  height: 90vh;
+}
+
+.sliderImg {
+  object-fit: cover;
+  height: 90vh;
+}
+
+.caption {
+  color: black;
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  right: 60%;
+  text-align: left;
+}
+
+.caption h1 {
+  font-size: 60px;
+}
