@@ -1,0 +1,28 @@
+.product {
+  margin: 5px;
+}
+
+.imgContainer {
+  height: 550px;
+  width: 440px;
+  margin-bottom: 100px;
+}
+
+.imgContainer img {
+  height: 550px;
+  width: 440px;
+  margin-bottom: 10px;
+}
+.imgContainer img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.imgContainer h5:hover {
+  cursor: pointer;
+}
+
+.imgContainer p {
+  color: #432a6a;
+  font-weight: bold;
+}

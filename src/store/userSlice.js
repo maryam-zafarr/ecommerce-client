@@ -3,7 +3,7 @@ import { login, register } from "./api";
 
 const initialState = {
   user: null,
-  status: "pending",
+  status: "idle",
 };
 
 const userSlice = createSlice({

@@ -3,6 +3,7 @@ import Register from "./components/Auth/Register";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./components/Auth/Login";
 import Home from "./pages/Home";
+import Products from "./pages/Products";
 
 const App = () => {
   return (
@@ -15,6 +16,9 @@ const App = () => {
       </Route>
       <Route path="/login">
         <Login />
+      </Route>
+      <Route path="/products" exact>
+        <Products />
       </Route>
     </Switch>
   );
