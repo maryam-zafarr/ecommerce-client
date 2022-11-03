@@ -29,7 +29,7 @@ p {
   flex: 8;
   padding-left: 20px;
 }
-button {
+.newsletter button {
   flex: 1;
   height: 31px;
   border: none;
