@@ -1,0 +1,22 @@
+.productList {
+  margin: 100px 40px;
+}
+
+.productList h2 {
+  margin-left: 12px;
+}
+
+.filters {
+  margin: 20px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter {
+  display: flex;
+  align-items: baseline;
+}
+
+.items {
+  margin: 40px 0px;
+}

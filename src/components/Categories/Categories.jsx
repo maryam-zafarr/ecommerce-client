@@ -6,6 +6,7 @@ import CategoryItem from "./CategoryItem";
 const Categories = () => {
   return (
     <div className={classes.categories}>
+      s
       {categories.map((item) => {
         return <CategoryItem item={item} />;
       })}
