@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./components/Auth/Login";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
+import ProductDetails from "./pages/ProductDetails";
 
 const App = () => {
   return (
@@ -19,6 +20,9 @@ const App = () => {
       </Route>
       <Route path="/products" exact>
         <Products />
+      </Route>
+      <Route path="/products/:productId">
+        <ProductDetails />
       </Route>
     </Switch>
   );

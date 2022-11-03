@@ -38,8 +38,8 @@ const AllProducts = () => {
       <div className={`row ${classes.items}`}>
         {products.map((item) => {
           return (
-            <div className="col-4">
-              <ProductItem key={item._id} item={item} />
+            <div className="col-4" key={item._id}>
+              <ProductItem item={item} />
             </div>
           );
         })}

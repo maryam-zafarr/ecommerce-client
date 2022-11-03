@@ -37,12 +37,15 @@ export const login = createAsyncThunk("user/loginUser", async (userData) => {
 });
 
 // GET ALL PRODUCTS
-export const getProducts = createAsyncThunk("products/addProduct", async () => {
-  const response = await fetch(`${DOMAIN}/products`);
-  const data = await response.json();
+export const getProducts = createAsyncThunk(
+  "products/getProducts",
+  async () => {
+    const response = await fetch(`${DOMAIN}/products`);
+    const data = await response.json();
 
-  if (!response.ok) {
-    throw new Error(data.message || "Unable to fetch products.");
+    if (!response.ok) {
+      throw new Error(data.message || "Unable to fetch products.");
+    }
+    return data;
   }
-  return data;
-});
+);
