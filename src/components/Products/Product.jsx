@@ -8,12 +8,11 @@ const Product = (props) => {
 
   const formik = useFormik({
     initialValues: {
-      id: props.product._id,
       quantity: 1,
       size: "",
     },
     onSubmit: async (values) => {
-      console.log({ ...values, color });
+      props.addToCart({ ...values, color });
     },
   });
 

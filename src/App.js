@@ -5,6 +5,7 @@ import Login from "./components/Auth/Login";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
+import Cart from "./pages/Cart";
 
 const App = () => {
   return (
@@ -23,6 +24,9 @@ const App = () => {
       </Route>
       <Route path="/products/:productId">
         <ProductDetails />
+      </Route>
+      <Route path="/cart">
+        <Cart />
       </Route>
     </Switch>
   );
