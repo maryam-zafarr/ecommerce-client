@@ -1,0 +1,15 @@
+.summary {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid rgba(215, 210, 210, 0.542);
+  border-radius: 5px;
+}
+
+.summary h2 {
+  font-weight: 300;
+  font-size: 28px;
+}
+
+.content {
+  margin-top: 15px;
+}
