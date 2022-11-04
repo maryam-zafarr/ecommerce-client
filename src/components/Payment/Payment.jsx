@@ -3,10 +3,13 @@ import {
   useElements,
   PaymentElement,
 } from "@stripe/react-stripe-js";
+import { useHistory } from "react-router-dom";
 
 const Payment = () => {
   const stripe = useStripe();
   const elements = useElements();
+
+  const history = useHistory();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -18,21 +21,23 @@ const Payment = () => {
     const result = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: "http://localhost:3000",
+        return_url: "http://localhost:3000/success",
       },
     });
 
     if (result.error) {
       console.log(result.error.message);
     } else {
-      console.log("success");
+      history.push("/success");
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <PaymentElement />
-      <button disabled={!stripe}>Submit</button>
+      <button disabled={!stripe} className="btn btn-warning mt-4">
+        Submit
+      </button>
     </form>
   );
 };
