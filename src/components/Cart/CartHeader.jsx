@@ -13,7 +13,9 @@ const CartHeader = () => {
           </Link>
         </div>
         <div>
-          <button className="btn btn-dark">CHECKOUT</button>
+          <Link className="btn btn-dark" to="/checkout">
+            CHECKOUT
+          </Link>
         </div>
       </div>
     </div>
