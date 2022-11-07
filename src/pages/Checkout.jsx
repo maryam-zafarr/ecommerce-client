@@ -2,7 +2,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import Payment from "../components/Payment/Payment";
+import Payment from "../components/Order/Payment";
 import Card from "../components/UI/Card";
 
 const stripePromise = loadStripe(

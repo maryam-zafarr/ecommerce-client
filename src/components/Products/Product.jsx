@@ -5,14 +5,22 @@ import classes from "./Product.module.css";
 
 const Product = (props) => {
   const [color, setColor] = useState("");
+  const [quantity, setQuantity] = useState(1);
+
+  const onAdd = () => {
+    setQuantity((prevState) => prevState + 1);
+  };
+
+  const onRemove = () => {
+    setQuantity((prevState) => prevState - 1);
+  };
 
   const formik = useFormik({
     initialValues: {
-      quantity: 1,
       size: "",
     },
     onSubmit: async (values) => {
-      props.addToCart({ ...values, color });
+      props.addToCart({ ...values, color, quantity });
     },
   });
 
@@ -57,14 +65,14 @@ const Product = (props) => {
           </div>
           <div className={classes.order}>
             <div className={classes.select}>
-              <Remove />
+              <Remove onClick={onRemove} />
               <input
                 id="quantity"
                 type="text"
-                value={formik.values.quantity}
+                value={quantity}
                 onChange={formik.handleChange}
               />
-              <Add />
+              <Add onClick={onAdd} />
             </div>
             <div>
               <button type="submit">ADD TO CART</button>
