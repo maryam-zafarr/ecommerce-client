@@ -30,7 +30,7 @@ const cartSlice = createSlice({
           return String(existingProduct._id) !== id;
         });
       }
-      state.quantity -= 1;
+      state.quantity -= existingProduct.quantity;
       state.totalPrice =
         state.totalPrice - existingProduct.price * existingProduct.quantity;
     },
