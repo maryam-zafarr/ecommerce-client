@@ -1,9 +1,18 @@
+import { Cancel } from "@mui/icons-material";
 import React from "react";
+import { useDispatch } from "react-redux";
+import { removeProduct } from "../../store/cartSlice";
 import classes from "./CartItem.module.css";
 
 const CartItem = (props) => {
   const itemColor =
     props.item.color.charAt(0).toUpperCase() + props.item.color.slice(1);
+  const id = props.item._id;
+  const dispatch = useDispatch();
+
+  const onRemove = () => {
+    dispatch(removeProduct(id));
+  };
 
   return (
     <div className={classes.item}>
@@ -22,8 +31,11 @@ const CartItem = (props) => {
         <div className="col-2">
           <p>{props.item.quantity}</p>
         </div>
-        <div className="col-2">
+        <div className="col-1">
           <p>{props.item.quantity * props.item.price}</p>
+        </div>
+        <div className="col-1">
+          <Cancel onClick={onRemove} />
         </div>
       </div>
     </div>

@@ -19,10 +19,25 @@ const cartSlice = createSlice({
     addAddress: (state, action) => {
       state.address = action.payload;
     },
+    removeProduct: (state, action) => {
+      const id = action.payload;
+      const existingProduct = state.products.find(
+        (product) => String(product._id) === String(id)
+      );
+
+      if (existingProduct) {
+        state.products = state.products.filter(function (existingProduct) {
+          return String(existingProduct._id) !== id;
+        });
+      }
+      state.quantity -= 1;
+      state.totalPrice =
+        state.totalPrice - existingProduct.price * existingProduct.quantity;
+    },
   },
   extraReducers(builder) {},
 });
 
-export const { addProduct, addAddress } = cartSlice.actions;
+export const { addProduct, addAddress, removeProduct } = cartSlice.actions;
 
 export default cartSlice.reducer;
