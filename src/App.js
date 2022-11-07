@@ -9,6 +9,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Success from "./components/Order/Success";
 import Address from "./components/Order/Address";
+import PrivateRoute from "./PrivateRoute";
 
 const App = () => {
   return (
@@ -31,15 +32,15 @@ const App = () => {
       <Route path="/cart">
         <Cart />
       </Route>
-      <Route path="/address">
+      <PrivateRoute path="/address">
         <Address />
-      </Route>
-      <Route path="/payment">
+      </PrivateRoute>
+      <PrivateRoute path="/payment">
         <Checkout />
-      </Route>
-      <Route path="/success">
+      </PrivateRoute>
+      <PrivateRoute path="/success">
         <Success />
-      </Route>
+      </PrivateRoute>
     </Switch>
   );
 };
