@@ -13,7 +13,7 @@ const CartHeader = () => {
           </Link>
         </div>
         <div>
-          <Link className="btn btn-dark" to="/payment">
+          <Link className="btn btn-dark" to="/address">
             CHECKOUT
           </Link>
         </div>

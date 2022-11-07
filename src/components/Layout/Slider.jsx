@@ -9,7 +9,7 @@ const Slider = () => {
       <Carousel>
         {sliderItems.map((item) => {
           return (
-            <Carousel.Item>
+            <Carousel.Item key={item.title}>
               <img
                 className={`d-block w-100 ${classes.sliderImg}`}
                 src={item.img}

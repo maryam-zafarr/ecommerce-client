@@ -7,7 +7,8 @@ import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
-import Success from "./components/Payment/Success";
+import Success from "./components/Order/Success";
+import Address from "./components/Order/Address";
 
 const App = () => {
   return (
@@ -29,6 +30,9 @@ const App = () => {
       </Route>
       <Route path="/cart">
         <Cart />
+      </Route>
+      <Route path="/address">
+        <Address />
       </Route>
       <Route path="/payment">
         <Checkout />
