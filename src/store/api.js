@@ -49,24 +49,3 @@ export const getProducts = createAsyncThunk(
     return data;
   }
 );
-
-// ADD ORDER
-export const addOrder = createAsyncThunk(
-  "cart/addOrder",
-  async (orderData, token) => {
-    const response = await fetch(`${DOMAIN}/orders`, {
-      method: "POST",
-      body: JSON.stringify(orderData),
-      headers: {
-        token: `Bearer ${token}`,
-        "Content-type": "application/json",
-      },
-    });
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(data.message || "Unable to make order.");
-    }
-    return data;
-  }
-);
