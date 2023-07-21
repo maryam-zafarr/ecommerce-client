@@ -16,7 +16,7 @@ function Checkout() {
   useEffect(() => {
     const makeRequest = async () => {
       const response = await fetch(
-        "http://localhost:5000/api/checkout/payment",
+        "https://ecommerce-vanity-api.onrender.com/api/checkout/payment",
         {
           method: "POST",
           body: JSON.stringify({
